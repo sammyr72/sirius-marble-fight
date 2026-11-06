@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sirius Marble Fight — little robots punch each other with marbles on your table</title>
+<meta name="description" content="Sirius Marble Fight is a mixed-reality brawler for Meta Quest. Two robots fight on a tabletop arena in your room, each wearing a marble on its fists. Over 716 million marbles, dozens of arenas, and a robot head that really dents.">
+<meta property="og:title" content="Sirius Marble Fight">
+<meta property="og:description" content="Little robots. Big marbles. Your coffee table. A mixed-reality brawler for Meta Quest by Baglunch Games.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1a1815">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Caveat:wght@500;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="mark" href="#top" aria-label="Sirius Marble Fight, home">
+    <span class="mark__a">SIRIUS</span><span class="mark__b">MARBLE FIGHT</span>
+  </a>
+  <nav aria-label="Main">
+    <a href="#how">How it plays</a>
+    <a href="#marbles">Marbles</a>
+    <a href="#arenas">Arenas</a>
+    <a href="#console">The console</a>
+    <a href="#facts">Facts</a>
+    <a href="#press">Press</a>
+  </nav>
+  <a class="stamp stamp--sm" data-store-link href="#facts">Coming to Quest</a>
+</header>
+
+<main id="top">
+
+<!-- ───────────────────────────── HERO ───────────────────────────── -->
+<section class="hero">
+  <div class="hero__text">
+    <p class="note note--hero">a tabletop brawler<br>for Meta Quest <svg class="arrow" viewBox="0 0 90 60" aria-hidden="true"><path d="M4 8 C 30 4, 58 14, 72 44 M 72 44 L 58 38 M 72 44 L 78 28"/></svg></p>
+    <h1>Little robots.<br>Big&nbsp;marbles.<br><span class="red">Your coffee&nbsp;table.</span></h1>
+    <p class="lede">Two robots square up on a tabletop arena that appears in your room. Each one wears a marble on its fists, and you throw the punches. Hit a head hard enough and the plastic really dents.</p>
+    <div class="cta">
+      <a class="btn" data-store-link href="#facts">Coming to Meta Quest</a>
+      <a class="btn btn--plain" href="#how">How a fight goes</a>
+    </div>
+  </div>
+
+  <figure class="box box--hero">
+    <span class="tape tape--l" aria-hidden="true"></span><span class="tape tape--r" aria-hidden="true"></span>
+    <img src="img/key-art.jpg" width="1920" height="1080" alt="A robot's head is dented by a cat's-eye marble fist coming in from the viewer's side, in front of a wall of marbles. The logo reads Sirius Marble Fight.">
+    <figcaption>Key art, rendered from the game’s own robots and marbles.</figcaption>
+  </figure>
+</section>
+
+<div class="spill" id="spillTop" aria-hidden="true"></div>
+
+<!-- ───────────────────────────── HOW IT PLAYS ───────────────────────────── -->
+<section class="rules" id="how">
+  <div class="wrap">
+    <h2>How a fight goes</h2>
+    <p class="sub">The short version, in the order it happens.</p>
+
+    <ol class="tags">
+      <li class="tag" style="--r:-1.4deg">
+        <span class="tag__n">1</span>
+        <h3>Set the table</h3>
+        <p>The arena shows up on your real table in passthrough, roughly forty centimetres across, with the robots at 1:18. A roulette wheel picks the place, and the wheel is worked out from a shared seed, so two headsets always land on the same one.</p>
+      </li>
+      <li class="tag" style="--r:1deg">
+        <span class="tag__n">2</span>
+        <h3>Draw two marbles</h3>
+        <p>One for each fist, out of the collection you own. No picking, no deck-building screen: you get what you draw, which is half the fun. Every marble in the game looks different from every other.</p>
+      </li>
+      <li class="tag" style="--r:-.6deg">
+        <span class="tag__n">3</span>
+        <h3>Fight</h3>
+        <p>Left stick walks your robot. Grip a controller and your hand flies a fist: how fast you swing sets the damage, how far you reach sets the reach. Knock the other robot off the table, out of the ring, or out cold.</p>
+      </li>
+      <li class="tag" style="--r:1.5deg">
+        <span class="tag__n">4</span>
+        <h3>First to three</h3>
+        <p>A marble that loses a round turns to steel. Win the match and you take marbles home.</p>
+      </li>
+    </ol>
+
+    <p class="note note--margin">yes, the dent is real geometry. we checked.</p>
+  </div>
+</section>
+
+<!-- ───────────────────────────── FIELD NOTES ───────────────────────────── -->
+<section class="notes">
+  <div class="wrap notes__grid">
+    <div class="notes__head">
+      <h2>Small things we fussed over</h2>
+      <p class="sub">None of these are on a feature checklist. All of them are in the game.</p>
+    </div>
+    <dl class="notes__list">
+      <div><dt>Dents</dt><dd>The fist pushes the robot’s mesh in along its path. The head you hit looks like the head you hit.</dd></div>
+      <div><dt>Weight</dt><dd>The fists are solid steel on a plastic body, so a swing carries its mass and a miss pulls you round with it.</dd></div>
+      <div><dt>Wobbly heads</dt><dd>Take enough hits to the head and the robot gets drunk. It goes down easier, and the third knockdown comes sooner than the first.</dd></div>
+      <div><dt>Slow-mo</dt><dd>When a round ends, time drops to a crawl while the room dims and the sound sinks a few notes. The camera never moves; it’s your head.</dd></div>
+      <div><dt>Barks</dt><dd>The robots yell. The voices are synthesised on the spot, shrill or monotone or oddly cheerful, and they scream in slow motion too.</dd></div>
+      <div><dt>Footprints</dt><dd>Sand, dust, gravel and clay take a print that scales with the robot. Big Bots crack the concrete.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ───────────────────────────── MARBLES ───────────────────────────── -->
+<section class="felt" id="marbles">
+  <div class="felt__marbles" id="wall" aria-hidden="true"></div>
+  <div class="wrap felt__inner">
+    <h2 class="light">716,636,160 marbles</h2>
+    <p class="sub light">That’s the size of the catalogue. Glass, steel, stone, clay, ember, galaxy; swirls, cat’s eyes, ribbons, flecks. Each has its own three-word name, worked out from its id, so it’s the same on every headset.</p>
+
+    <div class="marbles__row">
+      <div class="card" aria-label="An example marble card">
+        <div class="card__top"><span class="card__name">SLEEPY AMBER TEAPOT</span><span class="card__sub">FROSTED MIDNIGHT INDIGO WISP</span><i class="card__pip">U</i></div>
+        <div class="card__art"><img src="img/marbles/m05.webp" alt="" width="160" height="160"></div>
+        <div class="card__type">MARBLE – GLASS</div>
+        <div class="card__body">
+          <b>UNCOMMON</b>
+          <p>SHATTERS INTO SHARDS. YOU CAN SEE RIGHT THROUGH IT.</p>
+          <div class="bars"><span>KICK<i style="--v:.55"></i></span><span>HIT<i style="--v:.4"></i></span><span>FILL<i style="--v:.8"></i></span></div>
+        </div>
+        <div class="card__foot">ILLUS. THE LATHE © 2026 SAM ROBISON</div>
+      </div>
+
+      <ul class="marbles__facts">
+        <li><b>Four rarities,</b> common up to legendary, with the exact odds published.</li>
+        <li><b>The game is free.</b> Marble packs are optional, and the odds are printed before you buy.</li>
+        <li><b>Tiny galaxies.</b> The rarest marbles each hold a small galaxy you can lean in and look at.</li>
+        <li><b>Marbles that behave.</b> The material is part of the marble: glass shatters into shards, and an ember marble burns with a core of fire.</li>
+      </ul>
+    </div>
+    <p class="note note--light">hover a marble. they all have names.</p>
+  </div>
+</section>
+
+<!-- ───────────────────────────── ARENAS ───────────────────────────── -->
+<section class="arenas" id="arenas">
+  <div class="wrap">
+    <h2>A table full of places</h2>
+    <p class="sub">Forty-odd arenas, each one a small room, a game board or a stage built for brawling. These are overview shots from the game’s own camera. In the headset they sit on your table.</p>
+
+    <ul class="prints" id="prints">
+      <li style="--r:-1.2deg"><img loading="lazy" src="img/arenas/Chessboard.jpg" alt="A chessboard arena with oversized pieces"><span>Chessboard</span></li>
+      <li style="--r:.8deg"><img loading="lazy" src="img/arenas/BoxingRing.jpg" alt="A boxing ring with the logo on the canvas"><span>Boxing ring</span></li>
+      <li style="--r:-.5deg"><img loading="lazy" src="img/arenas/KitchenSink.jpg" alt="A glass-walled kitchen sink"><span>Kitchen sink</span></li>
+      <li style="--r:1.3deg"><img loading="lazy" src="img/arenas/DollsHouse.jpg" alt="A pink doll's house"><span>Doll’s house</span></li>
+      <li style="--r:.6deg"><img loading="lazy" src="img/arenas/MoonLanding.jpg" alt="A moonscape with a lander and a flag"><span>Moon landing</span></li>
+      <li style="--r:-1.1deg"><img loading="lazy" src="img/arenas/SnowGlobe.jpg" alt="A snow globe with fir trees and a snowman"><span>Snow globe</span></li>
+      <li style="--r:1deg"><img loading="lazy" src="img/arenas/FishTank.jpg" alt="A glowing fish tank"><span>Fish tank</span></li>
+      <li style="--r:-.7deg"><img loading="lazy" src="img/arenas/Dohyo.jpg" alt="A sumo dohyo ringed with torches"><span>Sumo dohyo</span></li>
+      <li style="--r:1.2deg"><img loading="lazy" src="img/arenas/BowlingLane.jpg" alt="A bowling lane under neon"><span>Bowling lane</span></li>
+      <li style="--r:-.9deg"><img loading="lazy" src="img/arenas/CasinoTable.jpg" alt="A casino table with scattered chips"><span>Casino table</span></li>
+      <li style="--r:.5deg"><img loading="lazy" src="img/arenas/CandyLand.jpg" alt="A candy-coloured board with lollipops"><span>Candy land</span></li>
+      <li style="--r:-1.3deg"><img loading="lazy" src="img/arenas/JungleTemple.jpg" alt="A stepped jungle temple lit by torches"><span>Jungle temple</span></li>
+      <li style="--r:.9deg"><img loading="lazy" src="img/arenas/Beach.jpg" alt="A beach with palm trees and open sea"><span>Beach</span></li>
+      <li style="--r:-.4deg"><img loading="lazy" src="img/arenas/Helipad.jpg" alt="A helipad with an H and traffic cones"><span>Helipad</span></li>
+      <li style="--r:1.1deg"><img loading="lazy" src="img/arenas/Octagon.jpg" alt="A pink-lit cage octagon"><span>The octagon</span></li>
+      <li style="--r:-1deg"><img loading="lazy" src="img/arenas/Macbeth.jpg" alt="A theatre stage with a red sun backdrop"><span>Macbeth, on a stage</span></li>
+      <li style="--r:.7deg"><img loading="lazy" src="img/arenas/PhantomOpera.jpg" alt="An opera stage with a golden organ"><span>Opera house</span></li>
+      <li style="--r:-.6deg"><img loading="lazy" src="img/arenas/MagicFlute.jpg" alt="A starry theatre stage"><span>Magic flute</span></li>
+      <li style="--r:1.4deg"><img loading="lazy" src="img/arenas/NeonAlley.jpg" alt="A rainy neon alley with ramen signs"><span>Neon alley</span></li>
+      <li style="--r:-.8deg"><img loading="lazy" src="img/arenas/BoxingGym.jpg" alt="A boxing gym with a FIGHT sign"><span>The gym</span></li>
+      <li style="--r:.4deg"><img loading="lazy" src="img/arenas/Warehouse.jpg" alt="A warehouse with a forklift and shelving"><span>Warehouse</span></li>
+      <li style="--r:-1.2deg"><img loading="lazy" src="img/arenas/SoccerField.jpg" alt="A soccer pitch under a glass dome"><span>Soccer pitch</span></li>
+      <li style="--r:1deg"><img loading="lazy" src="img/arenas/SubwayPlatform.jpg" alt="A subway platform with a rail track"><span>Subway platform</span></li>
+      <li style="--r:-.5deg"><img loading="lazy" src="img/arenas/ZenGarden.jpg" alt="A zen garden with raked gravel and stones"><span>Zen garden</span></li>
+    </ul>
+    <p class="note note--margin">some of them have hazards. the beach has a sea.</p>
+  </div>
+</section>
+
+<!-- ───────────────────────────── ROBOTS ───────────────────────────── -->
+<section class="robots">
+  <div class="wrap robots__grid">
+    <div class="robots__text">
+      <h2>One robot, many paint jobs</h2>
+      <p class="sub">The robot is a faceless white-panelled android, built from code rather than sculpted, and it can be re-skinned. Skins are purely cosmetic: they change how you look and never how you hit.</p>
+      <p>The bots come with temperaments. Some box, some shove, and some just press you toward the edge until you’re out of table. Every one has a name, and a few of them are huge.</p>
+    </div>
+    <ul class="poses">
+      <li style="--r:-2deg"><img loading="lazy" src="img/robots/05_punch_fist.jpg" alt="An orange robot winds up a punch"></li>
+      <li style="--r:1.2deg"><img loading="lazy" src="img/robots/06_uppercut.jpg" alt="A white and magenta robot in a guard"></li>
+      <li style="--r:-.8deg"><img loading="lazy" src="img/robots/01_hero_stance.jpg" alt="A tan robot standing with its fists on its hips"></li>
+      <li style="--r:2deg"><img loading="lazy" src="img/robots/09_champion.jpg" alt="A yellow robot with both fists raised"></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ───────────────────────────── CONSOLE ───────────────────────────── -->
+<section class="console" id="console">
+  <div class="wrap">
+    <h2>There’s a console on the table, too</h2>
+    <p class="sub">An old CRT with a handle on the side. It’s where you pick fights, open marble packs and change the lights. And it hides a few games of its own, all played with the marbles you’ve won.</p>
+
+    <div class="crt" role="list">
+      <article role="listitem">
+        <h3>> THE CIRCUIT</h3>
+        <p>A ladder of fixed, named bots, from a cautious defender to a Big Boss. Beat the Circuit and the Gauntlet opens: three at once, swarms of tiny bots, a pair of giants.</p>
+      </article>
+      <article role="listitem">
+        <h3>> RINGER</h3>
+        <p>Proper traditional marbles. A ten-foot ring, thirteen marbles in a cross, and a surface you have to read: short pile, deep pile, asphalt, blacktop. Knock them out; keep what you capture.</p>
+      </article>
+      <article role="listitem">
+        <h3>> LABYRINTH</h3>
+        <p>A wooden tilt maze folded into one long corridor, with forty-two numbered gates you have to pass in order, and holes in between.</p>
+      </article>
+      <article role="listitem">
+        <h3>> ASMR TABLE</h3>
+        <p>A tray of steel, ivory, stone or dark-wood marbles, and the sound of them rolling. The quietest thing in the game.</p>
+      </article>
+      <article role="listitem">
+        <h3>> THE GYM</h3>
+        <p>A heavy bag, a double-end bag, a sparring dummy and an 80s cabinet with a neon sign. Warm up before you fight.</p>
+      </article>
+      <article role="listitem">
+        <h3>> COZY ROOM</h3>
+        <p>Not into passthrough? Swap your living room for a softly lit one with a couch, a rug and a window at dusk. The game stays on the table.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────────── ONLINE ───────────────────────────── -->
+<section class="online">
+  <div class="wrap online__grid">
+    <h2>Fight someone else’s robot</h2>
+    <div>
+      <p>Online matches run through your Meta account. Both headsets agree on the arena, the marbles and the result, and you can block or report anyone from inside the game.</p>
+      <p class="small">No voice chat. No ads. No analytics or crash-reporting services. The <a href="https://sammyr72.github.io/sirius-marble-fight-privacy/">privacy policy</a> is short, and it says what’s kept and for how long.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────────── FACTS ───────────────────────────── -->
+<section class="facts" id="facts">
+  <div class="wrap">
+    <h2>The details</h2>
+    <dl class="spec">
+      <div><dt>Platform</dt><dd>Meta Quest, mixed reality with passthrough. Controllers.</dd></div>
+      <div><dt>How you play</dt><dd>Seated or standing. It was built to be played from a chair.</dd></div>
+      <div><dt>Modes</dt><dd>Single player and online, the Circuit and Gauntlet, plus Ringer, Labyrinth and the ASMR table.</dd></div>
+      <div><dt>Languages</dt><dd>English, Spanish, French, German, Russian and Greek.</dd></div>
+      <div><dt>Price</dt><dd>Free to play. Marble packs are optional.</dd></div>
+      <div><dt>Developer</dt><dd>Baglunch Games, Sam Robison</dd></div>
+      <div><dt>Contact</dt><dd><a href="mailto:baglunchgames@gmail.com">baglunchgames@gmail.com</a></dd></div>
+      <div><dt>Store</dt><dd id="storeLine">Coming soon to the Meta Horizon Store.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ───────────────────────────── PRESS ───────────────────────────── -->
+<section class="press" id="press">
+  <div class="wrap">
+    <h2>Press kit</h2>
+    <p class="sub">Free to use when you’re writing about the game.</p>
+    <ul class="downloads">
+      <li><a href="img/press/sirius-marble-fight-key-art-2560x1440.png" download><img src="img/key-art.jpg" alt="" width="320" height="180"><b>Key art</b><span>2560 × 1440 PNG</span></a></li>
+      <li><a href="img/press/sirius-marble-fight-hero-3000x900.png" download><img src="img/hero-wide.jpg" alt="" width="320" height="96"><b>Wide hero</b><span>3000 × 900 PNG</span></a></li>
+      <li><a href="img/press/sirius-marble-fight-icon-512.png" download><img src="img/icon.png" alt="" width="180" height="180"><b>App icon</b><span>512 × 512 PNG</span></a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p><b>Sirius Marble Fight</b> © 2026 Baglunch Games</p>
+    <p>Also from Baglunch Games: <a href="https://sammyr72.github.io/atomic-smash-lab/">Atomic Smash Lab</a> · <a href="https://sammyr72.github.io/wallbangers/">Wallbangers</a></p>
+    <p><a href="https://sammyr72.github.io/sirius-marble-fight-privacy/">Privacy policy</a> · <a href="mailto:baglunchgames@gmail.com">Contact</a></p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

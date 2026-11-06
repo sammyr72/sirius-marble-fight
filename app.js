@@ -1,0 +1,64 @@
+// Sirius Marble Fight site. Two jobs: scatter the marbles, and give each one a name when you hover it.
+
+// Set this to the store page when the game is live; every "Coming to Quest" button becomes a link to it.
+const STORE_URL = '';
+
+(function () {
+  // ── store buttons ──
+  const links = document.querySelectorAll('[data-store-link]');
+  const line = document.getElementById('storeLine');
+  if (STORE_URL) {
+    links.forEach(a => { a.href = STORE_URL; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = a.classList.contains('stamp') ? 'Get it on Quest' : 'Get it on Meta Quest'; });
+    if (line) line.innerHTML = '<a href="' + STORE_URL + '" target="_blank" rel="noopener noreferrer">Meta Horizon Store</a>';
+  }
+
+  // ── a seeded random, so the table looks the same every visit ──
+  let seed = 20261106;
+  const rnd = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
+  const pick = a => a[Math.floor(rnd() * a.length)];
+
+  // Names in the game's pattern, adjective + given name + noun. These are examples, not the game's real marbles.
+  const ADJ = ['SLEEPY','FUNNY','PEACEFUL','CRUNCHY','ABLE','BASHFUL','DUSTY','GIDDY','HOLLOW','LUCKY','MELLOW','NERVOUS','PLUCKY','QUIET','RUSTY','SMUG','TIDY','WOBBLY','YAWNING','ZESTY'];
+  const NAME = ['ANATOLY','YAMAH','TAHIRA','OTTAVIO','BRONWEN','DESMOND','ELOWEN','FINBAR','GRETA','HUGO','INES','JASPER','KALINDA','LEOPOLD','MIRABEL','NOOR','ORSON','PRIYA','QUENTIN','ROSALIND'];
+  const NOUN = ['ZEBU','HELMET','WHIRLWIND','BAMBOO','TEAPOT','LANTERN','PEBBLE','ACORN','KETTLE','BISCUIT','COMPASS','THIMBLE','WALRUS','MITTEN','ANVIL','TURNIP','SPARROW','BUCKET','FIDDLE','PRETZEL'];
+  const nameFor = () => pick(ADJ) + ' ' + pick(NAME) + ' ' + pick(NOUN);
+
+  const FILES = Array.from({ length: 64 }, (_, i) => 'img/marbles/m' + String(i).padStart(2, '0') + '.webp');
+
+  function marble(container, x, y, size, i) {
+    const m = document.createElement('span');
+    m.className = 'm';
+    m.style.cssText = 'left:' + x + '%;top:' + y + '%;width:' + size + 'px;height:' + size + 'px;--rot:' + Math.round(rnd() * 40 - 20) + 'deg;';
+    m.dataset.name = nameFor();
+    const img = document.createElement('img');
+    img.src = FILES[i % FILES.length]; img.alt = ''; img.loading = 'lazy'; img.width = 160; img.height = 160;
+    m.appendChild(img);
+    container.appendChild(m);
+  }
+
+  // marbles spilling out from under the hero picture
+  const spill = document.getElementById('spillTop');
+  if (spill) {
+    const n = 15;
+    for (let i = 0; i < n; i++) {
+      const x = 3 + (94 / n) * i + rnd() * 3;
+      marble(spill, x, rnd() * 38, 46 + rnd() * 50, i * 3 + 1);
+    }
+  }
+
+  // the dark section's wall of marbles, thinned out where the words are
+  const wall = document.getElementById('wall');
+  if (wall) {
+    wall.classList.add('wall');
+    const cols = 10, rows = 7;
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        const x = (c + (r % 2 ? .5 : 0) + rnd() * .35) / cols * 100;
+        const y = (r + rnd() * .3) / rows * 100;
+        marble(wall, x, y, 54 + rnd() * 70, r * cols + c + 7);
+        // keep the words readable: marbles behind the text sit back until you hover them
+        if (x > 6 && x < 76 && y > 4 && y < 88) wall.lastChild.classList.add('dim');
+      }
+    }
+  }
+})();
