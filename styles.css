@@ -252,3 +252,5 @@ h3{ font-size:1.7rem; line-height:1; }
   html{ scroll-behavior:auto; }
   *{ transition:none !important; }
 }
+
+.crt h3 small{font-size:.6em;opacity:.65;font-weight:400;letter-spacing:.08em;text-transform:uppercase;margin-left:.4em}
