@@ -308,3 +308,16 @@ h3{ font-size:1.7rem; line-height:1; }
 .ring .rm.shooter{ width:20%; box-shadow:0 0 0 3px var(--red),3px 6px 5px rgba(0,0,0,.4); }
 .ring .rlabel{ position:absolute; left:50%; bottom:-2.4rem; transform:translateX(-50%) rotate(-3deg); font-family:'Caveat',cursive; font-weight:700; font-size:1.6rem; color:var(--red); white-space:nowrap; }
 @media (max-width:860px){ .spread{ grid-template-columns:minmax(0,1fr); } .spread:nth-of-type(even) .spread__art{ order:0; } }
+
+/* ── flow ── */
+.flow{ padding:clamp(3rem,7vw,6rem) 0; background:#dfe5d2; border-top:3px solid var(--ink); }
+.kicker--flow{ color:#2f6f4a; }
+.flow__grid{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.4rem; margin-top:2.2rem; }
+.flowcard{ background:#fbf8ef; border:3px solid var(--ink); box-shadow:6px 6px 0 var(--ink); padding:1.2rem 1.3rem 1rem; }
+.flowcard:nth-child(1){ transform:rotate(-.8deg); } .flowcard:nth-child(2){ transform:rotate(.7deg); } .flowcard:nth-child(3){ transform:rotate(-.5deg); }
+.flowcard h3{ font-size:1.9rem; margin:0 0 .5rem; }
+.flowcard p{ margin:0 0 .6rem; line-height:1.5; }
+.stamp-note{ display:inline-block; font-family:'Caveat',cursive; font-weight:700; font-size:1.6rem; color:var(--red); border:3px solid var(--red); padding:0 .6rem; transform:rotate(-4deg); margin:0 0 .6rem !important; }
+.spread--sand{ margin-top:clamp(2.5rem,6vw,4rem); }
+.sand{ display:block; width:100%; height:auto; border:1px solid var(--ink); }
+@media (max-width:860px){ .flow__grid{ grid-template-columns:minmax(0,1fr); } }
