@@ -20,7 +20,7 @@ const STORE_URL = '';
   // Names in the game's pattern, given name + adjective and noun run together. These are examples, not the game's real marbles.
   const ADJ = ['SLEEPY','FUNNY','PEACEFUL','CRUNCHY','ABLE','BASHFUL','DUSTY','GIDDY','HOLLOW','LUCKY','MELLOW','NERVOUS','PLUCKY','QUIET','RUSTY','SMUG','TIDY','WOBBLY','YAWNING','ZESTY'];
   const NAME = ['ANATOLY','YAMAH','TAHIRA','OTTAVIO','BRONWEN','DESMOND','ELOWEN','FINBAR','GRETA','HUGO','INES','JASPER','KALINDA','LEOPOLD','MIRABEL','NOOR','ORSON','PRIYA','QUENTIN','ROSALIND'];
-  const NOUN = ['ZEBU','HELMET','WHIRLWIND','BAMBOO','TEAPOT','LANTERN','PEBBLE','ACORN','KETTLE','BISCUIT','COMPASS','THIMBLE','WALRUS','MITTEN','ANVIL','TURNIP','SPARROW','BUCKET','FIDDLE','PRETZEL'];
+  const NOUN = ['ZEBU','HELMET','WHIRLWIND','BAMBOO','TEAPOT','LANTERN','PEBBLE','ACORN','PANCAKE','BISCUIT','COMPASS','THIMBLE','WALRUS','MITTEN','ANVIL','TURNIP','SPARROW','BUCKET','FIDDLE','PRETZEL'];
   const nameFor = () => pick(NAME) + ' ' + pick(ADJ) + pick(NOUN);
 
   const FILES = Array.from({ length: 64 }, (_, i) => 'img/marbles/m' + String(i).padStart(2, '0') + '.webp');
