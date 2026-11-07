@@ -62,3 +62,20 @@ const STORE_URL = '';
     }
   }
 })();
+
+// Ringer: thirteen marbles in a cross and a shooter waiting at the edge
+(function () {
+  const ring = document.getElementById('ringDemo');
+  if (!ring) return;
+  const files = [5, 12, 19, 23, 28, 31, 36, 40, 44, 49, 53, 58, 61].map(n => 'img/marbles/m' + String(n).padStart(2, '0') + '.webp');
+  const pts = [[0, 0]];
+  for (let k = 1; k <= 3; k++) pts.push([k, 0], [-k, 0], [0, k], [0, -k]);
+  pts.forEach((p, i) => {
+    const m = document.createElement('span'); m.className = 'rm';
+    m.style.left = (50 + p[0] * 8.6) + '%'; m.style.top = (50 + p[1] * 8.6) + '%';
+    const im = document.createElement('img'); im.src = files[i % files.length]; im.alt = ''; im.loading = 'lazy'; m.appendChild(im); ring.appendChild(m);
+  });
+  const s = document.createElement('span'); s.className = 'rm shooter'; s.style.left = '78%'; s.style.top = '80%';
+  const si = document.createElement('img'); si.src = 'img/marbles/m33.webp'; si.alt = ''; s.appendChild(si); ring.appendChild(s);
+  const l = document.createElement('span'); l.className = 'rlabel'; l.textContent = 'the shooter (you want theirs)'; ring.appendChild(l);
+})();
